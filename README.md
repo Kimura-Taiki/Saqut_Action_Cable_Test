@@ -8,3 +8,4 @@
 
 - controllerとviewを構築する
 - ActionCableの設定を行う
+- データの保存先をつくる
