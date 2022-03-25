@@ -6,3 +6,4 @@
 
 ----
 
+- controllerとviewを構築する
