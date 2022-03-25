@@ -11,6 +11,7 @@
   
     def speak(data)
       p "Channel側のspeakへ来たよー"
-      ActionCable.server.broadcast("room_channel", {message: data["message"]})
+      # ActionCable.server.broadcast("room_channel", {message: data["message"]})
+      Message.create! content: data["message"]
     end
   end
