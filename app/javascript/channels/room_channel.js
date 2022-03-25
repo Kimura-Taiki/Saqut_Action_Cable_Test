@@ -11,13 +11,15 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
-    console.log("receivedしたよー")
+    console.log("receivedしたよー");
     // Called when there's incoming data on the websocket for this channel
-    return alert(data["message"])
+    // return alert(data["message"]);
+    const messages = document.getElementById("messages");
+    messages.insertAdjacentHTML("beforeend", data["message"])
   },
 
   speak: function(message) {
-    console.log("JavaScript側のspeakへ来たよー")
+    console.log("JavaScript側のspeakへ来たよー");
     return this.perform('speak', {message: message});
   }
 });
